@@ -1,0 +1,454 @@
+@font-face {
+    font-family: "Acari Sans";
+    src: url("../fonts/AcariSans-Regular.ttf");
+}
+
+html, body {
+    height: auto;
+}
+
+body {
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-height: 100vh;
+    font-family: "Acari Sans";
+    margin: auto;
+    max-width: 2000px;
+    /* background-color: rgb(189, 223, 255); */
+    /* background: rgb(135,139,233); */
+    background: linear-gradient(0deg, rgba(116,0,131,1) 1%,
+                    rgba(75,137,222,1) 60%, rgba(26,213,252,1) 100%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Logo styling */
+.logo {
+    width: 35px;
+    height: 35px;
+}
+
+.logoIcon, .companyTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    position: sticky;
+    line-height: 25px;
+    background-image: url('../assets/nav-background-image.jpg');
+}
+
+/* Company Name styling */
+.companyTitle {
+    display: flex;
+    justify-content: center;
+    color: rgb(17, 166, 211);
+    animation: color-change 3s infinite;
+}
+ 
+@keyframes color-change {
+    0% { color: rgb(247, 0, 255); }
+    25% { color: rgb(17, 0, 255); }
+    50% { color: rgb(0, 238, 255);}
+    75% { color: rgb(17, 0, 255); }
+    100% { color: rgb(247, 0, 255); }
+}
+
+.blinkable {
+    animation: blink-text 0.5s 1;
+}
+
+@keyframes blink-text {
+    0% { opacity: 1; color:red }
+    25% { opacity: 0.2; color: white}
+    50% { opacity: 1; color: red}
+    75% { opacity: 0.2; color: white}
+    100% { opacity: 1; color: red;}
+  }
+
+.hidden {
+    display: none;
+}
+
+/* Navbar styling */
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.navigation > * {
+    font-size: 20px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: rgb(11, 47, 87);
+}
+
+.menu a:hover {
+    color: rgb(16, 100, 133);
+    background: rgba(255, 255, 255, 0.288);
+}
+
+.outerInputWrapper {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.columnWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    max-width: 73vh;
+}
+
+.allInputItemsWrapper {
+    background-color: rgb(92 114 250 / 53%);
+    box-shadow: 6px 5px 10px 0px rgb(234 8 230 / 62%);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1.2px solid rgb(208, 119, 250);
+    border-radius: 10px;
+}
+
+.innerInputItemWrapper {
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-end;
+}
+
+.dateCounter {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+/* .verticalDivider {
+    border-left: 1px solid rgb(255, 255, 255);
+    height: 30px;
+} */
+
+.fullBorder {
+    border: 1px solid rgb(255, 255, 255);
+    margin: 2px;
+}
+
+.inputButton {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+    border-color: rgb(127, 20, 189);
+    background-color: rgb(213 17 210);
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.inputButton:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(127, 20, 189)
+}
+
+/* Checkboxes with Grid layout
+.checkText  {grid-area: chck;}
+.priceChkbx  { grid-area: pric; }
+.stopsChkbx  { grid-area: stop; }
+.compCodeChkbx  { grid-area: comp; }
+.fromChkbx  { grid-area: from; }
+.toChkbx  { grid-area: to; }
+.dateChkbx  { grid-area: date; } */
+
+/* Generic Wrapper */
+.outerGenericWrapper {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.checkboxRow > * {
+    padding: 5px;
+}
+
+.checkboxWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(84 108 255 / 53%);
+    box-shadow: 6px 5px 10px 0px rgb(234 8 230 / 62%);
+    margin: 5px;
+    color: white;
+    padding: 12px;
+    border: 1.2px solid rgb(208, 119, 250);
+    border-radius: 10px;
+    align-items: flex-start;
+}
+
+.checkboxRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.rowWrapper {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* Table Styling */
+
+/* Table Wrapper */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 20px;
+    min-width: -webkit-fill-available; /* It fixes a visual bug*/
+}
+
+
+.mainTable {
+    width: 70%;
+    border: 0.2px solid rgb(208, 119, 250);
+    border-radius: 17px;
+    border-spacing: 0px;
+}
+
+.tableHeader {
+    background-color: rgb(208, 119, 250);
+    color: white;
+    font-size: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 6px;
+}
+
+/* border radius in the first and last header element */
+th:not(.hidden):first-child, th.hidden + th:not(.hidden) {
+    border-radius: 15px 0px 0px 0px;
+}
+
+th:not(.hidden):last-child {
+    border-radius: 0px 15px 0px 0px;
+}
+
+/* border radius for the first data child of the last row */
+tr:not(.hidden):last-child > td:first-child {
+    border-radius: 0px 0px 0px 15px;
+}
+
+/* border radius for the last data child of the last row */
+tr:not(.hidden):last-child > td:last-child {
+    border-radius: 0px 0px 15px 0px;
+}
+
+.sortIcon{
+    margin: 5px;
+    font-size: 10px;
+    display: none;
+}
+
+.row {
+    font-size: 16px;
+    background-color: rgb(246, 232, 252);
+}
+
+.row:nth-child(odd) {
+    background-color: #dce4fabd;
+}
+
+.row:hover {
+    background-color: rgb(238, 197, 255);
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.buttonWrapper > * {
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#dateRow > label:hover {
+    background-color: rgba(238, 197, 255, 0.514);
+}
+
+.tooltipContainer {
+    padding: 5px;
+    position: relative;
+}
+
+.tooltipContainer + .tooltipText {
+    display: none;
+    background-color: rgb(156, 0, 156);
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    border-radius: 10px;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltipContainer:hover ~ .tooltipText {
+    display: flex;
+}
+
+.tooltipText:hover {
+    display: flex;
+}
+
+.ui-autocomplete {
+    background-color: rgb(208, 119, 250);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 18.5vh;
+    border-radius: 0px 0px 10px 10px;
+    padding: 2px;
+    list-style-type: none; 
+}
+
+.ui-autocomplete > *:hover {
+    background-color: rgba(252, 152, 255, 0.712);
+}
+
+
+/* Smaller screen */
+@media all and (max-width: 800px) {
+   
+}
+
+/* Smallest screen */
+@media all and (max-width: 400px) {
+
+    .logoIcon, .companyTitle {
+        display: none;
+    }
+
+    .header a {
+        float: none;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    .menu, .navigation {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .menu a {
+        text-align: center;
+        padding: 10px;
+        border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .menu li:last-of-type a {
+        border-bottom: none;
+    }
+
+    .menu li:first-of-type a {
+        border-top: none;
+    }
+
+    .allInputItemsWrapper {
+        flex-direction: column;
+    }
+
+    #dateRow {
+        display: grid;
+        grid-template-columns: repeat(2, 15vh);
+    }
+
+    .verticalDivider {
+        display: none;
+    }
+
+    .tableHeader {
+        font-size: 17px;
+    }
+
+    .outerGenericWrapper {
+        display: grid;
+        justify-content: space-around;
+        padding: 0px;
+    }
+    
+    .innerInputItemWrapper {
+        align-self: flex-start;
+    }
+
+    .checkboxWrapper {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+    }
+}
+
+/* Footer styling */
+#footer {
+    background-color: rgb(116, 0, 131);
+    bottom: 0;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    clear: both;
+    position: relative;
+    height: 2rem;
+    text-align: center;     
+    padding-top: 6px;  
+    padding-bottom: 4px;    
+    font-size: 14px;   
+    color: whitesmoke;
+  }
+
+  .ui-helper-hidden-accessible {
+    display: none;
+  }
