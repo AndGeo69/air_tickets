@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Finder</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a class="logoIcon" href="index.html"><img class="logo" src="assets/logo.svg"
+                    alt="Airplane tickets finder logo"></a>
+            <p class="companyTitle">Your Booking Company</p>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">My Tickets</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="outerGenericWrapper">
+        <div class="columnWrapper">
+            <div class="allInputItemsWrapper">
+                <div class="rowWrapper">
+                    <div class="innerInputItemWrapper from">
+                        <label>From:</label><input type="text" class="searchName" id="fromText" name="from">
+                    </div>
+                    <div class="innerInputItemWrapper to">
+                        <label>To:</label><input type="text" class="searchName" id="toText" name="to">
+                    </div>
+                    <div class="innerInputItemWrapper depart">
+                        <label>Depart:</label><input type="date" id="departDate" name="depart">
+                    </div>
+                </div>
+                <!-- <div class="innerInputItemWrapper"> -->
+                    <div class="rowWrapper">
+                        <!-- <div class="rowWrapper submit"> -->
+                            <input type="submit" class="inputButton innerInputItemWrapper" id="addFlightBtn" value="Add flight">
+                            <input type="submit" class="inputButton innerInputItemWrapper" id="searchBtn" value="Search">
+                        <!-- </div> -->
+                        <div class="innerInputItemWrapper dateCounter">
+                            <label id="dateCounter">0</label><label>/</label><label id="maxDatesAllowed">x</label>
+                        </div>
+                    </div>
+                <!-- </div> -->
+
+                <!-- <div class="innerInputItemWrapper return">
+                    <label>Return:</label><input type="date" id="return" name="return">
+                </div> -->
+            </div>
+        </div>
+       
+        
+        <div class="checkboxWrapper" id="checkboxes">
+            <p class="checkText">Shown Columns:</p>
+            <div class="priceChkbx checkBoxItem">
+                <input type="checkbox" class="checkbox" name="col0" value="Price" checked>
+                <label for="priceChkbx">Price (€)</label>
+            </div>
+            <div class="stopsChkbx checkBoxItem">
+                <input type="checkbox" class="checkbox" name="col1" value="Stops" checked>
+                <label for="stopsChkbx">Stops</label>
+            </div>
+            <div class="compCodeChkbx checkBoxItem">
+                <input type="checkbox" class="checkbox" name="col2" value="CompCode" checked>
+                <label for="compCodeChkbx">Airline Code</label>
+            </div>
+            <div class="dateChkbx checkBoxItem">
+                <input type="checkbox" class="checkbox" name="col5" value="Date" checked>
+                <label for="dateChkbx">Flight Date</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper" id="tableWrapper">
+        <table class="mainTable" id="ticketTable">
+            <thead class="tableHeader">
+                <tr>
+                    <th class="col0">Price (€)<p class="sortIcon">▲</p>
+                    </th>
+                    <th class="col1">Stops<p class="sortIcon">▲</p>
+                    </th>
+                    <th class="col2">Airline Code<p class="sortIcon">▲</p>
+                    </th>
+                    <th class="col5">Flight Date<p class="sortIcon">▲</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr class="row" id="tableRow0">
+                    <td class="col0" id="price0">100 €</td>
+                    <td class="col1" id="stops0">0</td>
+                    <td class="col2" id="compCode0">TRNS</td>
+                    <td class="col5" id="date0">15/2/23</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div style="flex-grow:1"></div>
+    <footer id="footer">This is a footnote with basic copyright text.</br>© 2023 AndGeo</footer>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"  type="text/javascript"></script> 
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+<script src="js/main.js"></script>
+<script src="js/amadeusService.js"></script>
+</html>
